@@ -7,12 +7,14 @@
   "scripts": {
     "dev": "bun --watch src/index.js",
     "start": "bun src/index.js",
+    "seed": "bun src/seed.js",
     "test": "bun test"
   },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "helmet": "^8.3.0",
