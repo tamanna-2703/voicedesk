@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { connectDB } from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import appointmentRoutes from "./routes/appointmentRoutes.js";
+import callLogRoutes from "./routes/callLogRoutes.js";
 import { setupSwagger } from "./config/swagger.js";
 
 const app = express();
@@ -14,6 +15,7 @@ setupSwagger(app);
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/appointments", appointmentRoutes);
+app.use("/api/calls", callLogRoutes);
 
 
 /**
